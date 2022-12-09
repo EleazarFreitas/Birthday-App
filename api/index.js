@@ -7,6 +7,6 @@ const port = 3000;
 
 routes(app);
 
-app.listen(port, () => { console.log('Server is running!') })
+app.listen(port, () => { console.log('Server is running!') });
 
 module.exports = app;
