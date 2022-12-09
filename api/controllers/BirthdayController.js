@@ -31,6 +31,28 @@ class BirthdayController {
         };
     };
 
+    static async updateAbirthday (req, res) {
+        const { id } = req.params;
+        const newBirthdayInfos = req.body;
+        try {
+            await database.Birthdays.update(newBirthdayInfos, { where: { id: Number(id) } });
+            const birthdayUpdated = await database.Birthdays.findOne( { where: { id: Number(id) } } );
+            return res.status(200).json(birthdayUpdated);
+        } catch (error) {
+            return res.status(500).json(error.message);
+        };
+    };
+
+    static async destroyAbirthday (req, res) {
+        const { id } = req.params;
+        try {
+            await database.Birthdays.destroy( { where: { id: Number(id) } } );
+            return res.status(200).send(`Birthday ${id} deleted!`);
+        } catch (error) {
+            return res.status(500).json(error.message);
+        };
+    };
+
 };
 
 module.exports = BirthdayController;
