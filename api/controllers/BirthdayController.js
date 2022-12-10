@@ -4,7 +4,7 @@ class BirthdayController {
 
     static async getAllBirthdays (req, res) {
         try {
-            const allBirthdays = await database.Birthdays.findAll();
+            const allBirthdays = await database.Birthdays.findAll( { order: [['createdAt', 'DESC']] } );
             return res.status(200).json(allBirthdays);
         } catch (error) {
             return res.status(500).json(error.message);
