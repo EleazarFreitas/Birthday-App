@@ -38,8 +38,8 @@ h1 {
 }
 
 .fade-in-content {
-    opacity: 0;
-    transition: 1000ms;
+    /* opacity: 0;
+    transition: 1000ms; */
 }
 
 .avatar {
