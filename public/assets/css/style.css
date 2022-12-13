@@ -1,0 +1,247 @@
+@font-face {
+    font-family: 'Ultine Cond Regular';
+    src: url('../font/ultine-cond-regular.ttf');
+}
+
+:root {
+    --HotPink: #fe69a3;
+    --Thulian: #e56dd0;
+    --Cerise: #e06e9b;
+    --RosePink: #F28AB2;
+    --Shadow: rgba(0, 0, 0, 0.1);
+    --Smoke: rgba(0, 0, 0, 0.2);
+    --HarborGray: #343a40;
+    --White: #fff;
+    --Crimson: #b80f0a;
+}
+
+body {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--RosePink);
+    font-family: 'Ultine Cond Regular';
+}
+
+main {
+    width: 400px;
+    height: 625px;
+    background-color: var(--White);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 70px 70px 50px var(--Cerise);
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+.fade-in-content {
+    opacity: 0;
+    transition: 1000ms;
+}
+
+.avatar {
+    width: 50px;
+    height: 50px;
+}
+
+.years {
+    font-size: 0.9rem;
+}
+
+a:hover .dot-index {
+    color: var(--RosePink) !important;
+}
+
+.viewAll {
+    width: calc(100% - 4rem);
+    text-decoration: none;
+    background: linear-gradient(to right, var(--Thulian), var(--HotPink));
+    color: var(--White);
+    padding: 25px 0;
+    display: block;
+    position: absolute;
+    bottom: 2rem;
+    text-align: center;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    font-weight: bold;
+    border-radius: 5px;
+    box-shadow: 10px 10px 10px var(--Shadow);
+}
+
+.viewAll:hover {
+    color: var(--White);
+    background: linear-gradient(to right, var(--HotPink), var(--Thulian));    
+}
+
+.viewAll:active {
+    transform: scale(1.01);
+}
+
+.show-hide-birthdays {
+    display: inline-block;
+    transform: rotate(180deg);
+}
+
+.details {
+    padding: 5px 13px;
+    border-radius: 50%;
+}
+
+.details:hover {
+    background-color: var(--Shadow);
+    cursor: pointer;
+}
+
+.add {
+    text-decoration: none;
+    background: linear-gradient(to right, var(--Thulian), var(--HotPink));
+    color: var(--White);
+    padding: 12px 28px;
+    display: inline-block;
+    position: absolute;
+    right: 2rem;
+    bottom: 2rem;
+    text-align: center;
+    font-size: 2.2rem;
+    letter-spacing: 1px;
+    font-weight: bold;
+    border-radius: 50%;
+    box-shadow: 10px 10px 10px var(--Shadow);
+}
+
+.add:hover {
+    color: var(--White);
+    background: linear-gradient(to right, var(--HotPink), var(--Thulian));    
+}
+
+.add:active {
+    transform: scale(1.01);
+}
+
+.gear {
+    cursor: pointer;
+}
+
+.gear:hover {
+    color: var(--HarborGray) !important;
+}
+
+.options {
+    position: absolute;
+    top: 2.5rem;
+    right: 0;
+}
+
+.optionsHover{
+    width: 90px;
+}
+
+.options .fa-circle {
+    font-size: 0.5rem;
+    color: var(--Smoke);
+    visibility: hidden;
+}
+
+.optionsHover:hover .fa-circle {
+    visibility: inherit;
+}
+
+.bg-delete, .bg-chooseAvatar {
+    z-index: 1;
+    background-color: var(--Smoke);
+}
+
+.btn-delete:active, .btn-cancel:active, .changeAvatar:active, .btn-save:active {
+    transform: scale(1.01);
+}
+
+.btn-cancel, .changeAvatar, .btn-closeAvatar {
+    color: var(--White);
+    background: linear-gradient(to right, var(--Thulian), var(--HotPink));
+    cursor: pointer;
+    opacity: 1;
+}
+
+.btn-cancel:hover, .changeAvatar:hover, .btn-save:hover, .btn-closeAvatar:hover {
+    color: var(--White);
+    background: linear-gradient(to right, var(--HotPink), var(--Thulian));
+    opacity: 1;
+}
+
+.inputAdd {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid var(--HarborGray);
+}
+
+.inputAdd:focus {
+    outline: none;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+}
+
+.validationMsg {
+    margin-bottom: 0.5rem;
+    font-size: 0.7rem;
+    color: var(--Crimson);
+    visibility: hidden;
+}
+
+.btn-save {
+    width: 100%;
+    text-decoration: none;
+    background: linear-gradient(to right, var(--Thulian), var(--HotPink));
+    color: var(--White);
+    padding: 25px 0;
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    font-weight: bold;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 10px 10px 10px var(--Shadow);
+}
+
+.spin {
+    width: 18px;
+    height: 18px;
+    display: none;
+    margin-bottom: -2px;
+    border: 3px solid;
+    border-color: var(--White) var(--White) var(--White) transparent;
+    border-radius: 50%;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.img-avatar {
+    width: 69px;
+    cursor: pointer;
+}
+
+.img-avatar:hover {
+    transform: scale(1.25);
+}
+
+.btn-closeAvatar {
+    height: 3rem;
+    width: 3rem;
+    border: none;
+    border-radius: 50%;
+}
+
+/* ::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+} */
