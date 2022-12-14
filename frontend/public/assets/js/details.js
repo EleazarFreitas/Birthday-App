@@ -1,7 +1,4 @@
-import { fadeInContent } from './FadeInContent.js';
 import { getCurrAge } from './getCurrAge.js';
-
-fadeInContent();
 
 const id = Number(new URL(window.location).searchParams.get('id'));
 

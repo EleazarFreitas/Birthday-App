@@ -1,8 +1,5 @@
-import { fadeInContent } from "./FadeInContent.js";
 import { validateLettersOnly, validationMsg } from "./inputsValidation.js"
 import { saving } from "./saving.js";
-
-fadeInContent();
 
 const randomAvatar = document.querySelector('[randomAvatar]');
 const avatarBtn = document.querySelector('[avatarBtn]');

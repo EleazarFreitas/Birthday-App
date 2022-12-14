@@ -1,7 +1,4 @@
-import { fadeInContent } from "./FadeInContent.js";
 import { getCurrAge } from './getCurrAge.js';
-
-fadeInContent();
 
 function birthdayTemplate (data) {
     const birthdayTemplate = `<a class="text-decoration-none" href="details.html?id=${data.id}"><div class="d-flex align-items-center gap-2 my-3">

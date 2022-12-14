@@ -1,7 +1,4 @@
-import { fadeInContent } from "./FadeInContent.js";
 import { getCurrAge } from "./getCurrAge.js";
-
-fadeInContent();
 
 function birthdayTemplate (data) {
     const birthdayTemplate = `<a href="resources/views/details.html?id=${data.id}" class="text-decoration-none d-block my-3">
@@ -36,4 +33,5 @@ fetch('https://birthday-app-production.up.railway.app/birthdays')
         todayBirthdays.innerHTML += birthdayTemplate(data);
     };
     howManyBirthdaysToday.textContent = maxFiveBirthdays.length > 5 ? '+ ' + 5 : maxFiveBirthdays.length;
-});
+})
+.catch(error => console.log(error.message));
