@@ -1,6 +1,15 @@
 const database = require('../models');
+const path = require('path');
 
 class BirthdayController {
+
+    static async birthdayApp (req, res) {
+        try {
+            return res.sendFile(path.join(__dirname, '../../index.html'));
+        } catch (error) {
+            return res.status(500).json(error.message);
+        };
+    };
 
     static async getAllBirthdays (req, res) {
         try {
