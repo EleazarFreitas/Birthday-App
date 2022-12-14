@@ -6,7 +6,7 @@ const inputsToUpdate = document.querySelector('form');
 const avatarToUpdate = inputsToUpdate.firstElementChild.firstElementChild;
 const {firstName, lastName, dateOfBirth} = inputsToUpdate.elements;
 
-fetch('https://birthday-app-production.up.railway.app/birthdays/' + id)
+fetch('https://birthday-app.up.railway.app/birthdays/' + id)
     .then(response => response.json())
     .then(json => {
         avatarToUpdate.src = '../../public/assets/img/' + json.avatar + '.png';

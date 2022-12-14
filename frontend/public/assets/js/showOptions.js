@@ -20,7 +20,7 @@ deletePopup.onclick = e => {
     const deleteButton = e.target;
     e.preventDefault();
     if (deleteButton.parentNode.tagName === 'FORM') {
-        fetch('https://birthday-app-production.up.railway.app/birthdays/' + id, {
+        fetch('https://birthday-app.up.railway.app/birthdays/' + id, {
             method: 'delete'
         }).then(() => {
             window.location.href = '../../../resources/views/viewAll.html';

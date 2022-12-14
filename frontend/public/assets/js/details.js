@@ -2,7 +2,7 @@ import { getCurrAge } from './getCurrAge.js';
 
 const id = Number(new URL(window.location).searchParams.get('id'));
 
-fetch('https://birthday-app-production.up.railway.app/birthdays/' + id)
+fetch('https://birthday-app.up.railway.app/birthdays/' + id)
     .then(response => response.json())
     .then(json => {
         const date = new Date(json.dateOfBirth);
