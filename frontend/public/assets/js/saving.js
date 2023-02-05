@@ -1,7 +1,7 @@
 const saveBtn = document.querySelector('.btn-save');
 
 async function updating (data, id) {
-    const url = 'https://birthday-app.up.railway.app/birthdays/';
+    const url = 'http://localhost:3000/birthdays/';
     const endpoint = id ? url + id : url;
     const method = id ? 'put' : 'post';
     fetch(endpoint, {

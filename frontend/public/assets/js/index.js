@@ -19,7 +19,7 @@ function birthdayTemplate (data) {
     return birthdayTemplate;
 };
 
-fetch('https://birthday-app.up.railway.app/birthdays')
+fetch('http://localhost:3000/birthdays')
 .then(response => response.json())
 .then(json => {
     const todayBirthdays = document.querySelector('[todayBirthdays]');
